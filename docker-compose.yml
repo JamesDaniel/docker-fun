@@ -1,0 +1,19 @@
+ 
+version: "2.2"
+services:
+  slowweb:
+    build: ./serverimage
+    ports:
+      - "1-65535:1-65535"
+  #   healthcheck:
+  #     test: ["CMD", "curl", "-f", "http://localhost:8080/test"]
+  #     interval: 30s
+  #     timeout: 10s
+  #     retries: 7
+  # fastweb:
+  #   build: ./clientimage
+  #   ports:
+  #     - "8081:8081"
+  #   depends_on:
+  #     slowweb:
+  #       condition: service_healthy
